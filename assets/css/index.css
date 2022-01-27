@@ -1,0 +1,577 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 60px 80px;
+    display: grid;
+    grid-template: 
+        "header header header header" 130px
+        "nav nav nav nav" 
+        "big big big big" 600px
+        "wedding model fancy everything" 630px
+        "menu menu menu menu" 330px
+        "staff staff staff staff" 610px
+        "footer footer footer footer" 350px
+        / 1fr 1fr 1fr 1fr
+    ;
+    background-image: url(../images-homepage/hair.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #333333;
+    color: white;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.hum{
+    display: none;
+}
+
+nav{
+    grid-area: nav;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 40px;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+nav div{
+    padding: 20px;
+    border-top: 1px solid #2d2d2d;
+}
+
+nav div:hover{
+    border-top: 1px solid #997E45;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+
+
+.big{
+    grid-area: big;
+    background-image: url(../images-homepage/main1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.big-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    margin: 200px 100px;
+    color: white;
+}
+
+.big-text h2{
+    font-size: 50px;
+    margin: 0 0 30px 0;
+
+}
+
+.big-text p{
+    font-size: 20px;
+}
+
+.big-line {
+    position: absolute;
+    width: 2px;
+    background-color: #997E45;
+    height: 75%;
+    bottom: 0;
+    left: 38%;
+}
+
+.wedding{
+    grid-area: wedding;
+    background-image: url(../images-homepage/wedding.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wedding img{
+    display: none;
+}
+
+.hairstyle{
+    position: relative;
+}
+.hairstyle div{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* text-align: center; */
+    color: white;
+    width: 75%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hairstyle p:nth-child(1){
+    background-color: #997E45;
+    font-size: 20px;
+    padding: 2px 8px;
+    text-align: center;
+}
+.hairstyle p:nth-child(2){
+    font-size: 40px;
+    width: 100%;
+}
+
+.model{
+    grid-area: model;
+    background-image: url(../images-homepage/model.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fancy{
+    grid-area: fancy;
+    background-image: url(../images-homepage/fancy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.everything{
+    grid-area: everything;
+    background-image: url(../images-homepage/everything.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu{
+    background-color: #333333;
+    grid-area: menu;
+    display: grid;
+    grid-template: 
+        "what"  65px 
+        "item"
+        / 1fr;
+    padding: 0 auto;
+}
+
+.menu h3{
+    grid-area: what;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.menu .icons{
+    grid-area: item;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+}
+
+.staff{
+    grid-area: staff;
+    display: flex;
+    background-color: white;
+}
+.staff div:nth-child(1){
+    display: grid;
+    grid-template:
+        "staff1 staff2 staff3"
+        "staff4 staff5 staff6";
+    justify-content: start;
+    gap: 10px;
+    margin: 50px 0  50px 70px;
+}
+.staff1{
+    grid-area: staff1;
+}
+.staff2{
+    grid-area: staff2;
+}
+.staff3{
+    grid-area: staff3;
+}
+.staff4{
+    grid-area: staff4;
+}
+.staff5{
+    grid-area: staff5;
+}
+.staff6{
+    grid-area: staff6;
+}
+
+.staff div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 50px 70px 50px 40px;
+}
+
+.staff div p:nth-child(1){
+    font-size: 50px;
+    color: #997E45;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.staff div p:nth-child(2){
+    font-size: 25px;
+    margin: 25px 0 0 20px;
+}
+
+button{
+    width: 50%;
+    margin: 40px auto;
+    background: gray;
+    color: white;
+    border-radius: 30px;
+    opacity: 50%;
+    padding: 18px 32px;
+    border: none;
+    font-size: 22px;
+
+}
+
+button:hover{
+    opacity: 60%;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column; 
+}
+
+.sns{
+    background-color: #535353;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.sns p{
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    padding: 0 30px 0 0;
+}
+
+.sns img{
+    margin: 20px;
+}
+
+.sns img:hover{
+    width: 50px;
+}
+
+.shop{
+    background-color: #363637;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 220px;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.shop div{
+    padding: 70px;
+}
+
+.last{
+    background-color: #2f2f2f;
+    color: white;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+@media screen and (max-width: 425px) {
+    /* *{
+        box-sizing: border-box;
+        margin: 0 auto;
+    } */
+    body{
+        margin: 0;
+        background: none;
+        display: grid;
+        grid-template:
+        "header header" 150px
+        "big big" 280px
+        "hair-style model" 100px
+        "hair-style fancy" 100px
+        "hair-style everything" 100px
+        "menu menu" 380px
+        "staff staff" 670px
+        "footer footer"
+        / 1fr 1fr;
+        position: relative;
+    }    
+    header{
+        grid-area: header;
+        padding: 8px 10px 0 30px;
+        font-size: 15px;
+        justify-content: start;
+    }
+    
+    
+    .hum{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        border-radius: 10px;
+        z-index: 1;
+    }
+    nav{
+        display: none;
+    }
+
+
+    .big{
+        grid-area: big;
+        background-image: url(../images-homepage/main2.png);
+        
+    }
+    
+    .big-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 26%;
+        margin: 60px 20px ;
+        color: white;
+    }
+    
+    .big-text h2{
+        font-size: 20px;
+        margin: 0 0 10px 0;
+    }
+
+    .big-text p{
+        font-size: 10px;
+    }
+    
+    .big-line {
+        position: absolute;
+        width: 1px;
+        background-color: #997E45;
+        height: 75%;
+        bottom: 0;
+        left: 33%;
+    }
+
+
+    .wedding{
+        grid-area: hair-style;
+    }
+    .wedding div{
+        grid-area: wedding;
+    }
+
+    .model{
+        background-image: none;
+        background-color: #161616;
+    }
+    .model div{
+        grid-area: model;
+    }
+
+    .fancy{
+        background-image: none;
+        background-color: #343434;
+    }
+    .fancy div{
+        grid-area: fancy;
+    }
+
+    .everything{
+        background-image: none;
+        background-color: #606060;
+    }
+    .everything div{
+        grid-area: everything;
+    }
+
+
+    .hairstyle p:nth-child(1){
+        background-color: #997E45;
+        font-size: 15px;
+        padding: 2px 8px;
+        text-align: center;
+    }
+    .hairstyle p:nth-child(2){
+        font-size: 11px;
+        width: 100%;
+    }
+
+
+    .menu{
+        grid-area: menu; 
+    }
+
+    .menu h3{
+        grid-area: what;
+        font-size: 22px;
+        color: white;
+    }
+
+    .menu .icons {
+        flex-wrap: wrap;
+        width: 90%;
+        margin-top: 40px;
+    }
+    
+    .icons div {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        /* width: 50px; */
+        flex: 1;
+        margin: 10px;
+    }
+
+    .icons img{
+        width: 60px;
+    }
+
+    .icons p{
+        font-size: 15px;
+    }
+
+
+    .staff{
+        grid-area: staff;
+        background-color: white;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .staff div:nth-child(1){
+        display: grid;
+        grid-template:
+            "staff1 staff2 staff3"
+            "staff4 staff5 staff6"
+            / 1fr 1fr 1fr;
+        justify-content: start;
+        gap: 10px;
+        margin: 15px;
+    }
+    .staff img{
+        width: 120px;
+        height: 120px;
+    }
+    .staff1{
+        grid-area: staff1;
+    }
+    .staff2{
+        grid-area: staff2;
+    }
+    .staff3{
+        grid-area: staff3;
+    }
+    .staff4{
+        grid-area: staff4;
+    }
+    .staff5{
+        grid-area: staff5;
+    }
+    .staff6{
+        grid-area: staff6;
+    }
+    
+    .staff div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        font-size: 20px;
+        padding: 10px;
+
+    }
+    
+    .staff div p:nth-child(1){
+        font-size: 30px;
+        color: #997E45;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .staff div p:nth-child(2){
+        font-size: 18px;
+
+    }
+    
+    
+    button{
+        width: 70%;
+        margin: 20px auto;
+        background: gray;
+        color: white;
+        border-radius: 30px;
+        opacity: 50%;
+        padding: 10px 32px;
+        font-size: 20px;
+    }
+    button:hover{
+        opacity: 60%;
+    }
+
+
+    footer{
+        grid-area: footer;
+    }
+    .sns p{
+        display: none;
+    }
+    .shop{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .shop div{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .last{
+        font-size: 15px;
+        padding: 10px;
+    }
+}

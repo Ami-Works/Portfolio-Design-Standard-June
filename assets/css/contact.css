@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 60px 80px;
+    display: grid;
+    grid-template: 
+        "header" 130px
+        "nav"
+        "salon" 2080px
+        "footer" 350px
+        /1fr;
+    background-image: url(../images-homepage/hair.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.hum{
+    display: none;
+}
+.contact{
+    display: none;
+}
+
+
+header{
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #333333;
+    color: white;
+    gap: 20px;
+    font-size: 25px;
+}
+
+nav{
+    grid-area: nav;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 40px;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+nav div{
+    padding: 20px;
+    border-top: 1px solid #2d2d2d;
+}
+
+nav div:hover{
+    border-top: 1px solid #997E45;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+
+.styles{
+    grid-area: style;
+    display: flex;
+}
+
+
+
+.salon{
+    grid-area: salon;
+    display: grid;
+    grid-template: 
+        "contact" 600px
+        "infomation" 1070px
+        "pictures"
+        / 1fr;
+}
+
+
+.gather{
+    grid-area: contact;
+    display: flex;
+
+    background-image: url(../image-contact/back-0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    background-color: rgba(0, 0, 0, 0.552);
+    color: white;
+    width: 70%;
+    height: 90%;
+    margin: 30px;
+    padding: 0 20px 80px 20px;
+
+    position: relative;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px 30px;
+    width: 40%;
+
+    font-size: 23px;
+}
+
+form label{
+    margin-bottom: 5px;
+}
+
+form input{
+    height: 40px;
+}
+
+form div:nth-child(5){
+    width: 85%;
+    height: 30%;
+}
+
+form div:nth-child(6){
+    position: absolute;
+    left: 70px;
+    bottom: 50px;
+}
+
+.sub{
+    border-radius: 20px;
+    border: none;
+    width: 50%;
+    background: white;
+    color: black;
+    font-size: 17px;
+}
+
+.sub:hover{
+   background-color: rgba(0, 255, 255, 0.25);
+   color: white;
+
+}
+
+.gather p{
+    display: flex;
+    align-items: center;
+    width: 29%;
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+
+
+.info{
+    grid-area: infomation;
+    background-image: url(../image-contact/back-2.jpeg);
+    display: flex;
+    justify-content: center;
+}
+
+.info img{
+    margin: 20px 0;
+}
+
+.info article:nth-child(1){
+    background-color: rgba(255, 255, 255, 0.675);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px;
+    width: 55%;
+}
+.detale{
+    width: 80%;
+    font-size: 30px;
+}
+
+.detale h1{
+    margin-bottom: 10px;
+}
+
+span{
+    background-color: 997e45;
+}
+
+iframe{
+    margin: 50px 20px;
+}
+
+
+
+.garally{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column; 
+}
+
+.sns{
+    background-color: #535353;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.sns p{
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    padding: 0 30px 0 0;
+}
+
+.sns img{
+    margin: 20px;
+}
+
+.sns img:hover{
+    width: 50px;
+}
+
+.shop{
+    background-color: #363637;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 220px;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.shop div{
+    padding: 70px;
+}
+
+.last{
+    background-color: #2f2f2f;
+    color: white;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}

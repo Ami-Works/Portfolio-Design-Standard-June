@@ -1,0 +1,456 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 60px 80px;
+    display: grid;
+    grid-template: 
+        "header header" 130px
+        "nav nav" 
+        "team team" 650px
+        "products products" 600px
+        "feedback feedback" 330px
+        "info info" 1100px
+        "footer footer" 350px
+        / 1fr 1fr
+    ;
+    background-image: url(../images-homepage/hair.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #333333;
+    color: white;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.hum{
+    display: none;
+}
+.about{
+    display: none;
+}
+
+nav{
+    grid-area: nav;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 40px;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+nav div{
+    padding: 20px;
+    border-top: 1px solid #2d2d2d;
+}
+
+nav div:hover{
+    border-top: 1px solid #997E45;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+
+.team{
+    grid-area: team;
+    background-color: white;
+    display: flex;
+    padding: 35px;
+}
+.team img{
+    width: 870px;
+}
+.team div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team h2{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.team p{
+    font-size: 30px;
+    padding-left: 20px;
+    width: 93%;
+}
+
+.team button{
+    width: 60%;
+    background: gray;
+    color: white;
+    border-radius: 30px;
+    opacity: 50%;
+    padding: 16px 32px;
+    margin-top: 50px;
+    border: none;
+    font-size: 22px;
+}
+.team button:hover{
+    opacity: 60%;
+}
+
+.mobile1{
+    display: none;
+}
+
+.products{
+    grid-area: products;
+    background-color: #2d2d2d;
+    display: flex;
+    padding: 35px;
+}
+
+.products div:nth-child(1){
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.products h2{
+    font-size: 40px;
+    padding-bottom: 23px;
+}
+.products p{
+    font-size: 30px;
+    width: 93%;
+    padding: 0 30px;
+}
+
+.products img{
+    width: 670px;
+}
+
+.products button{
+    width: 60%;
+    background: rgb(220, 220, 220);
+    color: black;
+    border-radius: 30px;
+    opacity: 50%;
+    padding: 16px 32px;
+    margin-top: 50px;
+    border: none;
+    font-size: 22px;
+}
+
+.products button:hover{
+    opacity: 40%;
+}
+
+.products div:nth-child(3){
+    display: none;
+}
+
+
+.feedback{
+    grid-area: feedback;
+    background-color: white;
+    display: flex;
+    padding: 0 20px;
+}
+.feedback div{
+    border: 0.5px solid #757575;
+    margin: 35px 20px;
+    padding: 20px;
+    font-size: 25px;
+
+}
+
+.feedback div:nth-child(4){
+    border: none;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+.feedback div:nth-child(4):hover{
+    box-shadow: 2px 2px 2px #535353;
+}
+
+
+.info{
+    grid-area: info;
+    background-color: white;
+}
+.info p{
+    font-size: 45px;
+    margin: 40px auto;
+    text-align: center;
+}
+.info div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.info img{
+    width: 20%;
+    margin: 20px;
+}
+
+
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column; 
+}
+
+.sns{
+    background-color: #535353;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.sns p{
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    padding: 0 30px 0 0;
+}
+
+.sns img{
+    margin: 20px;
+}
+
+.sns img:hover{
+    width: 50px;
+}
+
+.shop{
+    background-color: #363637;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 220px;
+    font-size: 20px;
+    padding: 50px;
+}
+
+.shop div{
+    padding: 70px;
+}
+
+.last{
+    background-color: #2f2f2f;
+    color: white;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+@media screen and (max-width: 425px) {
+    body{
+        margin: 0;
+        background: none;
+        display: grid;
+        grid-template:
+            "header" 150px
+            "about" 60px
+            "team" 800px
+            "products" 730px
+            "feedback" 330px
+            "footer"
+            / 1fr;
+    }
+
+    header{
+        grid-area: header;
+        padding: 8px 10px 0 30px;
+        font-size: 15px;
+        justify-content: start;
+    }
+
+    
+    .hum{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        border-radius: 10px;
+        z-index: 1;
+    }
+    .about{
+        display: block;
+        grid-area: about;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav{
+        display: none;
+    }
+
+
+    .team{
+        grid-area: team;
+        padding: 0;
+    }
+    .team div:nth-child(1), .team div:nth-child(2){
+        display: none;
+    }
+
+
+    .mobile1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    .mobile1 div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .mobile1 h2{
+        font-size: 30px;
+        margin: 30px auto 0 auto;
+        padding: 0;
+    }
+    
+    .mobile1 p{
+        font-size: 22px;
+        margin: 20px 0 30px 0;
+        padding: 0;
+    }
+    .mobile1 img{
+        width: 100%;
+    }
+    .mobile1 div:nth-child(2){
+         display: flex;
+         font-size: 17px;
+    }
+    .mobile1 button{
+        width: 70%;
+        margin: 23px 0 0 0;
+    }
+
+
+
+
+    .products{
+        grid-area: products;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .products img{
+        width: 100%;
+    }
+
+    .products div:nth-child(1),.products div:nth-child(2){
+        display: none;
+    }
+
+    .products div:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .products h2{
+        font-size: 30px;
+        margin: 30px auto 0 auto;
+        padding: 0;
+        color: white;
+    }
+    .products p{
+        font-size: 22px;
+        margin: 20px 0 30px 0;
+        padding: 0;
+        color: white;
+    }
+    .products button{
+        width: 70%;
+        margin: 23px 0 0 0;
+    }
+
+
+    .feedback{
+        grid-area: feedback;
+        background-color: white;
+        display: flex;
+    }
+    .feedback div:nth-child(1){
+        border: 0.5px solid #757575;
+        padding: 20px;
+        font-size: 20px;
+        width: 80%;
+    }
+    
+    .feedback div:nth-child(2),.feedback div:nth-child(3){
+        display: none;
+    }
+
+    .feedback div:nth-child(4){
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .info{
+        display: none;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+    .sns p{
+        display: none;
+    }
+    .shop{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .shop div{
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .last{
+        font-size: 15px;
+        padding: 10px;
+    }
+}
